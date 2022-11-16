@@ -96,17 +96,6 @@ Public Class Main
                 AddHandler dl.DownloadFileCompleted, AddressOf done
                 Me.Invoke(Sub() Label2.Text = "Download SRC from GitHub...")
                 dl.DownloadFileAsync(New Uri(url), fn)
-                'Me.Invoke(Sub() CircleProgressBar1.Value += 10)
-                'MsgBox(wb.Document.Body.InnerText)
-                Dim request As WebRequest = WebRequest.Create("https://github.com/Ryujinx/Ryujinx")
-                Using response As WebResponse = request.GetResponse()
-                    Using reader As New StreamReader(response.GetResponseStream())
-                        Dim html As String = reader.ReadToEnd()
-                        IO.File.WriteAllText(Application.StartupPath & "\gh", html)
-                    End Using
-                End Using
-                'MsgBox(wb.Document.GetElementsByTagName("relative-time"))
-                'MsgBox(extract(IO.File.ReadAllText("gh.html"), "<relative-time", "</relative-time>"))
                 Dim strB64Decoded As String = extract(IO.File.ReadAllText(Application.StartupPath & "\gh"), "<relative-time", "</relative-time>")
                 Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(strB64Decoded)
                 Dim strB64Encoded As String = System.Convert.ToBase64String(data)
@@ -202,5 +191,9 @@ Public Class Main
         End If
         Dim proc As Process = Process.Start(pHelp)
         proc.WaitForExit()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

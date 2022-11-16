@@ -241,7 +241,15 @@ Public Class Main
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Ryujinx-Installer")
-
+            MsgBox("Can't install .NET 7 using winget" & vbCr & "Please intall the Desktop Runtime and the SRC manually.", MsgBoxStyle.Critical, "Ryujinx-Installer")
+            Me.Invoke(Sub() Label3.Text = ".net 7 Desktop Runtime not found.")
+            Process.Start("https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.0-windows-x64-installer")
+            Process.Start("https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.100-windows-x64-installer")
+            IO.File.Delete("r.txt")
+            IO.File.Delete("s.bat")
+            Me.Close()
+            About.Close()
+            FR.Close()
         End Try
 
 
