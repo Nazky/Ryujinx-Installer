@@ -16,3 +16,7 @@ C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Release\Ryuj
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Release\Ryujinx-Installer.exe
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Release\Ryujinx-Installer.xml
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Release\Ryujinx-Installer.pdb
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\bin\Release\HtmlAgilityPack.dll
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\bin\Release\HtmlAgilityPack.pdb
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\bin\Release\HtmlAgilityPack.xml
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Release\Ryujinx_Installer.FWD.resources

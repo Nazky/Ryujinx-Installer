@@ -14,3 +14,6 @@ C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Debug\Ryujin
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Debug\Ryujinx_Installer.Main.resources
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Debug\Ryujinx_Installer.About.resources
 C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Debug\Ryujinx_Installer.FR.resources
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\obj\Debug\Ryujinx_Installer.FWD.resources
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\echol\source\repos\Ryujinx-Installer\Ryujinx-Installer\bin\Debug\HtmlAgilityPack.xml

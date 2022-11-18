@@ -22,6 +22,7 @@ Partial Class About
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -30,18 +31,21 @@ Partial Class About
         Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.HopeButton1 = New ReaLTaiizor.Controls.HopeButton()
+        Me.ParrotFormEllipse1 = New ReaLTaiizor.Controls.ParrotFormEllipse()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(11, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 24)
+        Me.Label1.Size = New System.Drawing.Size(69, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "ABOUT"
         '
@@ -102,7 +106,7 @@ Partial Class About
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 16)
         Me.Label6.TabIndex = 7
-        Me.Label6.Text = "0.1 | BETA"
+        Me.Label6.Text = "0.2 | BETA"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RichTextBox1
@@ -122,12 +126,23 @@ Partial Class About
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.HopeButton1)
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(419, 286)
         Me.Panel1.TabIndex = 9
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.HopeButton1)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(419, 39)
+        Me.Panel2.TabIndex = 4
         '
         'HopeButton1
         '
@@ -139,15 +154,20 @@ Partial Class About
         Me.HopeButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.HopeButton1.HoverTextColor = System.Drawing.Color.White
         Me.HopeButton1.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.HopeButton1.Location = New System.Drawing.Point(378, 12)
+        Me.HopeButton1.Location = New System.Drawing.Point(370, 0)
         Me.HopeButton1.Name = "HopeButton1"
         Me.HopeButton1.PrimaryColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HopeButton1.Size = New System.Drawing.Size(29, 21)
+        Me.HopeButton1.Size = New System.Drawing.Size(49, 39)
         Me.HopeButton1.SuccessColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.HopeButton1.TabIndex = 3
         Me.HopeButton1.Text = "X"
         Me.HopeButton1.TextColor = System.Drawing.Color.White
         Me.HopeButton1.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
+        '
+        'ParrotFormEllipse1
+        '
+        Me.ParrotFormEllipse1.CornerRadius = 20
+        Me.ParrotFormEllipse1.EffectedForm = Me
         '
         'About
         '
@@ -161,18 +181,19 @@ Partial Class About
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "About"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
+        Me.Opacity = 0.99R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -187,4 +208,6 @@ Partial Class About
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents HopeButton1 As ReaLTaiizor.Controls.HopeButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ParrotFormEllipse1 As ReaLTaiizor.Controls.ParrotFormEllipse
 End Class

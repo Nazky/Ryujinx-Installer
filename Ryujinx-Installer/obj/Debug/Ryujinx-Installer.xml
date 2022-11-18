@@ -22,6 +22,11 @@ Ryujinx-Installer
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:Ryujinx_Installer.My.Resources.Resources.HtmlAgilityPack">
+<summary>
+  Recherche une ressource localisée de type System.Byte[].
+</summary>
+</member>
 <member name="P:Ryujinx_Installer.My.Resources.Resources.MaterialSkin">
 <summary>
   Recherche une ressource localisée de type System.Byte[].

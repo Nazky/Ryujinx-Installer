@@ -16,11 +16,12 @@ Public Class Main
         Me.Close()
         About.Close()
         FR.Close()
+        FWD.Close()
     End Sub
 
     Private MouseIsDown As Boolean = False
     Private MouseIsDownLoc As Point = Nothing
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel2.MouseMove
 
         If e.Button = MouseButtons.Left Then
             If MouseIsDown = False Then
@@ -31,7 +32,7 @@ Public Class Main
             Me.Location = New Point(Me.Location.X + e.X - MouseIsDownLoc.X, Me.Location.Y + e.Y - MouseIsDownLoc.Y)
         End If
     End Sub
-    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
         MouseIsDown = False
     End Sub
 
@@ -91,6 +92,7 @@ Public Class Main
     Sub downloadgs(url As String, fn As String)
         Try
             Using dl As New WebClient()
+                Dim html As String
                 AddHandler dl.DownloadProgressChanged, AddressOf pchanged
                 AddHandler dl.DownloadFileCompleted, AddressOf done
                 Me.Invoke(Sub() Label3.Text = "Download SRC from GitHub...")
@@ -100,17 +102,15 @@ Public Class Main
                 Dim request As WebRequest = WebRequest.Create("https://github.com/Ryujinx/Ryujinx")
                 Using response As WebResponse = request.GetResponse()
                     Using reader As New StreamReader(response.GetResponseStream())
-                        Dim html As String = reader.ReadToEnd()
-                        IO.File.WriteAllText("gh", html)
+                        html = reader.ReadToEnd()
                     End Using
                 End Using
                 'MsgBox(wb.Document.GetElementsByTagName("relative-time"))
                 'MsgBox(extract(IO.File.ReadAllText("gh.html"), "<relative-time", "</relative-time>"))
-                Dim strB64Decoded As String = extract(IO.File.ReadAllText("gh"), "<relative-time", "</relative-time>")
+                Dim strB64Decoded As String = extract(html, "<relative-time", "</relative-time>")
                 Dim data As Byte() = System.Text.Encoding.UTF8.GetBytes(strB64Decoded)
                 Dim strB64Encoded As String = System.Convert.ToBase64String(data)
                 IO.File.WriteAllText(HopeTextBox1.Text & "\version", strB64Encoded)
-                IO.File.Delete("gh")
             End Using
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Ryujinx-Installer")
@@ -193,6 +193,8 @@ Public Class Main
             Me.Invoke(Sub() Label3.Text = "Moving folder...")
             Directory.Move(HopeTextBox1.Text & "\Ryujinx-src\Ryujinx-master\build", HopeTextBox1.Text & "\Ryujinx")
             IO.File.WriteAllBytes(HopeTextBox1.Text & "\ReaLTaiizor.dll", My.Resources.ReaLTaiizor)
+            IO.File.WriteAllBytes(HopeTextBox1.Text & "\MaterialSkin.dll", My.Resources.MaterialSkin)
+            IO.File.WriteAllBytes(HopeTextBox1.Text & "\HtmlAgilityPack.dll", My.Resources.HtmlAgilityPack)
             IO.File.WriteAllBytes(HopeTextBox1.Text & "\Ryujinx-Updater.exe", My.Resources.Ryujinx_Updater)
             Me.Invoke(Sub() Label3.Text = "Folder moved.")
             Me.Invoke(Sub() Label3.Text = "Deleting garbage...")
@@ -250,6 +252,7 @@ Public Class Main
             Me.Close()
             About.Close()
             FR.Close()
+            FWD.Close()
         End Try
 
 
@@ -263,4 +266,23 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub HopeButton5_Click(sender As Object, e As EventArgs) Handles HopeButton5.Click
+        Try
+            Dim dlk = MsgBox("Do you want to download the latest key ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Ryujinx-Installer")
+            If dlk = MsgBoxResult.Yes Then
+                Using dl As New WebClient
+                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx\system")
+                    dl.DownloadFile(New Uri(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String("aHR0cHM6Ly9zaWdtYXBhdGNoZXMuY29vbWVyLnBhcnR5L3Byb2Qua2V5cw=="))), Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx\system\prod.keys")
+                    MsgBox("Done !", MsgBoxStyle.Information, "Ryujinx-Installer")
+                End Using
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Ryujinx-Installer")
+        End Try
+
+    End Sub
+
+    Private Sub HopeButton4_Click(sender As Object, e As EventArgs) Handles HopeButton4.Click
+        FWD.Show()
+    End Sub
 End Class

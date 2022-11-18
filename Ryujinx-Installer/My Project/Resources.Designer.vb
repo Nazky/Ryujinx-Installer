@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Recherche une ressource localisée de type System.Byte[].
         '''</summary>
+        Friend ReadOnly Property HtmlAgilityPack() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("HtmlAgilityPack", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une ressource localisée de type System.Byte[].
+        '''</summary>
         Friend ReadOnly Property MaterialSkin() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("MaterialSkin", resourceCulture)

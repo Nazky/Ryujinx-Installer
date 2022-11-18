@@ -2,7 +2,7 @@
 Public Class About
     Private MouseIsDown As Boolean = False
     Private MouseIsDownLoc As Point = Nothing
-    Private Sub Panel1_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel1.MouseMove
+    Private Sub Panel2_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel2.MouseMove
 
         If e.Button = MouseButtons.Left Then
             If MouseIsDown = False Then
@@ -13,7 +13,7 @@ Public Class About
             Me.Location = New Point(Me.Location.X + e.X - MouseIsDownLoc.X, Me.Location.Y + e.Y - MouseIsDownLoc.Y)
         End If
     End Sub
-    Private Sub Panel1_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp
+    Private Sub Panel2_MouseUp(sender As Object, e As MouseEventArgs) Handles Panel2.MouseUp
         MouseIsDown = False
     End Sub
     Private Sub About_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,6 +27,4 @@ Public Class About
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Process.Start("https://twitter.com/NazkyYT")
     End Sub
-
-
 End Class

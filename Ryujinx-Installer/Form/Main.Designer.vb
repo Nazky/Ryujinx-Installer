@@ -24,38 +24,88 @@ Partial Class Main
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.HopeButton5 = New ReaLTaiizor.Controls.HopeButton()
+        Me.HopeButton4 = New ReaLTaiizor.Controls.HopeButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.HopeButton3 = New ReaLTaiizor.Controls.HopeButton()
         Me.HopeTextBox1 = New ReaLTaiizor.Controls.HopeTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.HopeCheckBox1 = New ReaLTaiizor.Controls.HopeCheckBox()
         Me.HopeButton2 = New ReaLTaiizor.Controls.HopeButton()
-        Me.HopeButton1 = New ReaLTaiizor.Controls.HopeButton()
+        Me.CircleProgressBar1 = New ReaLTaiizor.Controls.CircleProgressBar()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CircleProgressBar1 = New ReaLTaiizor.Controls.CircleProgressBar()
+        Me.HopeButton1 = New ReaLTaiizor.Controls.HopeButton()
+        Me.ParrotFormEllipse1 = New ReaLTaiizor.Controls.ParrotFormEllipse()
+        Me.ParrotControlEllipse1 = New ReaLTaiizor.Controls.ParrotControlEllipse()
+        Me.ParrotControlEllipse2 = New ReaLTaiizor.Controls.ParrotControlEllipse()
+        Me.ParrotControlEllipse3 = New ReaLTaiizor.Controls.ParrotControlEllipse()
+        Me.ParrotControlEllipse4 = New ReaLTaiizor.Controls.ParrotControlEllipse()
+        Me.ParrotControlEllipse5 = New ReaLTaiizor.Controls.ParrotControlEllipse()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.HopeButton5)
+        Me.Panel1.Controls.Add(Me.HopeButton4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.HopeButton3)
         Me.Panel1.Controls.Add(Me.HopeTextBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.HopeCheckBox1)
         Me.Panel1.Controls.Add(Me.HopeButton2)
-        Me.Panel1.Controls.Add(Me.HopeButton1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.CircleProgressBar1)
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 450)
         Me.Panel1.TabIndex = 1
+        '
+        'HopeButton5
+        '
+        Me.HopeButton5.BorderColor = System.Drawing.Color.Navy
+        Me.HopeButton5.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary
+        Me.HopeButton5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HopeButton5.DangerColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(108, Byte), Integer))
+        Me.HopeButton5.DefaultColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HopeButton5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HopeButton5.HoverTextColor = System.Drawing.Color.White
+        Me.HopeButton5.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.HopeButton5.Location = New System.Drawing.Point(403, 331)
+        Me.HopeButton5.Name = "HopeButton5"
+        Me.HopeButton5.PrimaryColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HopeButton5.Size = New System.Drawing.Size(153, 40)
+        Me.HopeButton5.SuccessColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.HopeButton5.TabIndex = 12
+        Me.HopeButton5.Text = "prod.keys downloader"
+        Me.HopeButton5.TextColor = System.Drawing.Color.White
+        Me.HopeButton5.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
+        '
+        'HopeButton4
+        '
+        Me.HopeButton4.BorderColor = System.Drawing.Color.Navy
+        Me.HopeButton4.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary
+        Me.HopeButton4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HopeButton4.DangerColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(108, Byte), Integer))
+        Me.HopeButton4.DefaultColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HopeButton4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HopeButton4.HoverTextColor = System.Drawing.Color.White
+        Me.HopeButton4.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.HopeButton4.Location = New System.Drawing.Point(244, 331)
+        Me.HopeButton4.Name = "HopeButton4"
+        Me.HopeButton4.PrimaryColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HopeButton4.Size = New System.Drawing.Size(153, 40)
+        Me.HopeButton4.SuccessColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.HopeButton4.TabIndex = 10
+        Me.HopeButton4.Text = "Firmware downloader"
+        Me.HopeButton4.TextColor = System.Drawing.Color.White
+        Me.HopeButton4.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
         '
         'Label3
         '
@@ -139,11 +189,11 @@ Partial Class Main
         Me.HopeCheckBox1.EnabledUncheckedColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(161, Byte), Integer))
         Me.HopeCheckBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.HopeCheckBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(48, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.HopeCheckBox1.Location = New System.Drawing.Point(341, 257)
+        Me.HopeCheckBox1.Location = New System.Drawing.Point(338, 257)
         Me.HopeCheckBox1.Name = "HopeCheckBox1"
-        Me.HopeCheckBox1.Size = New System.Drawing.Size(118, 20)
+        Me.HopeCheckBox1.Size = New System.Drawing.Size(124, 20)
         Me.HopeCheckBox1.TabIndex = 4
-        Me.HopeCheckBox1.Text = "Install .net 7"
+        Me.HopeCheckBox1.Text = "Install .NET 7"
         Me.HopeCheckBox1.UseVisualStyleBackColor = True
         '
         'HopeButton2
@@ -153,7 +203,7 @@ Partial Class Main
         Me.HopeButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.HopeButton2.DangerColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(108, Byte), Integer))
         Me.HopeButton2.DefaultColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.HopeButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.HopeButton2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HopeButton2.HoverTextColor = System.Drawing.Color.White
         Me.HopeButton2.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.HopeButton2.Location = New System.Drawing.Point(306, 199)
@@ -165,47 +215,6 @@ Partial Class Main
         Me.HopeButton2.Text = "INSTALL"
         Me.HopeButton2.TextColor = System.Drawing.Color.White
         Me.HopeButton2.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
-        '
-        'HopeButton1
-        '
-        Me.HopeButton1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer))
-        Me.HopeButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary
-        Me.HopeButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.HopeButton1.DangerColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(108, Byte), Integer))
-        Me.HopeButton1.DefaultColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.HopeButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.HopeButton1.HoverTextColor = System.Drawing.Color.White
-        Me.HopeButton1.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.HopeButton1.Location = New System.Drawing.Point(751, 12)
-        Me.HopeButton1.Name = "HopeButton1"
-        Me.HopeButton1.PrimaryColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.HopeButton1.Size = New System.Drawing.Size(37, 29)
-        Me.HopeButton1.SuccessColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.HopeButton1.TabIndex = 2
-        Me.HopeButton1.Text = "X"
-        Me.HopeButton1.TextColor = System.Drawing.Color.White
-        Me.HopeButton1.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(50, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 29)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "RYUJINX"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 29)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'CircleProgressBar1
         '
@@ -224,6 +233,89 @@ Partial Class Main
         Me.CircleProgressBar1.Value = CType(0, Long)
         Me.CircleProgressBar1.Visible = False
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer), CType(CType(16, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.HopeButton1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(800, 41)
+        Me.Panel2.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(47, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(123, 29)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "RYUJINX"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 29)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'HopeButton1
+        '
+        Me.HopeButton1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.HopeButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary
+        Me.HopeButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.HopeButton1.DangerColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(108, Byte), Integer))
+        Me.HopeButton1.DefaultColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HopeButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.HopeButton1.HoverTextColor = System.Drawing.Color.White
+        Me.HopeButton1.InfoColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.HopeButton1.Location = New System.Drawing.Point(748, 0)
+        Me.HopeButton1.Name = "HopeButton1"
+        Me.HopeButton1.PrimaryColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.HopeButton1.Size = New System.Drawing.Size(52, 41)
+        Me.HopeButton1.SuccessColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.HopeButton1.TabIndex = 2
+        Me.HopeButton1.Text = "X"
+        Me.HopeButton1.TextColor = System.Drawing.Color.White
+        Me.HopeButton1.WarningColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(60, Byte), Integer))
+        '
+        'ParrotFormEllipse1
+        '
+        Me.ParrotFormEllipse1.CornerRadius = 20
+        Me.ParrotFormEllipse1.EffectedForm = Me
+        '
+        'ParrotControlEllipse1
+        '
+        Me.ParrotControlEllipse1.CornerRadius = 20
+        Me.ParrotControlEllipse1.EffectedControl = Me.HopeButton2
+        '
+        'ParrotControlEllipse2
+        '
+        Me.ParrotControlEllipse2.CornerRadius = 20
+        Me.ParrotControlEllipse2.EffectedControl = Me.HopeButton4
+        '
+        'ParrotControlEllipse3
+        '
+        Me.ParrotControlEllipse3.CornerRadius = 20
+        Me.ParrotControlEllipse3.EffectedControl = Me.HopeButton5
+        '
+        'ParrotControlEllipse4
+        '
+        Me.ParrotControlEllipse4.CornerRadius = 20
+        Me.ParrotControlEllipse4.EffectedControl = Me.HopeTextBox1
+        '
+        'ParrotControlEllipse5
+        '
+        Me.ParrotControlEllipse5.CornerRadius = 20
+        Me.ParrotControlEllipse5.EffectedControl = Me.HopeButton3
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -233,10 +325,13 @@ Partial Class Main
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
+        Me.Opacity = 0.99R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ryujinx-Installer | UNOFFICIAL"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -248,9 +343,18 @@ Partial Class Main
     Friend WithEvents HopeButton1 As ReaLTaiizor.Controls.HopeButton
     Friend WithEvents HopeButton2 As ReaLTaiizor.Controls.HopeButton
     Friend WithEvents HopeCheckBox1 As ReaLTaiizor.Controls.HopeCheckBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents CircleProgressBar1 As ReaLTaiizor.Controls.CircleProgressBar
     Friend WithEvents HopeButton3 As ReaLTaiizor.Controls.HopeButton
     Friend WithEvents HopeTextBox1 As ReaLTaiizor.Controls.HopeTextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents HopeButton4 As ReaLTaiizor.Controls.HopeButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents HopeButton5 As ReaLTaiizor.Controls.HopeButton
+    Friend WithEvents ParrotFormEllipse1 As ReaLTaiizor.Controls.ParrotFormEllipse
+    Friend WithEvents ParrotControlEllipse1 As ReaLTaiizor.Controls.ParrotControlEllipse
+    Friend WithEvents ParrotControlEllipse2 As ReaLTaiizor.Controls.ParrotControlEllipse
+    Friend WithEvents ParrotControlEllipse3 As ReaLTaiizor.Controls.ParrotControlEllipse
+    Friend WithEvents ParrotControlEllipse4 As ReaLTaiizor.Controls.ParrotControlEllipse
+    Friend WithEvents ParrotControlEllipse5 As ReaLTaiizor.Controls.ParrotControlEllipse
 End Class

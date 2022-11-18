@@ -12,6 +12,7 @@ Public Class FR
             File.Copy(Application.ExecutablePath, System.IO.Path.GetTempPath & "\Ryujinx-Installer\Ryujinx-Installer.exe", True)
             File.WriteAllBytes(System.IO.Path.GetTempPath & "\Ryujinx-Installer\MaterialSkin.dll", My.Resources.MaterialSkin)
             File.WriteAllBytes(System.IO.Path.GetTempPath & "\Ryujinx-Installer\ReaLTaiizor.dll", My.Resources.ReaLTaiizor)
+            File.WriteAllBytes(System.IO.Path.GetTempPath & "\Ryujinx-Installer\HtmlAgilityPack.dll", My.Resources.HtmlAgilityPack)
             Process.Start(System.IO.Path.GetTempPath & "\Ryujinx-Installer\Ryujinx-Installer.exe")
             Me.Close()
         End If
