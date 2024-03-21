@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2587AF47-A53A-4365-931D-F9FA4B32A58E}</ProjectGuid>
+    <ProjectGuid>{B675A2D8-8E16-4B1A-8256-65F2E8152A6A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Ryujinx_Installer.My.MyApplication</StartupObject>
     <RootNamespace>Ryujinx_Installer</RootNamespace>
@@ -16,7 +16,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -24,6 +24,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Ryujinx-Installer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,33 +49,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Ryujinx-Logo.ico</ApplicationIcon>
+    <ApplicationIcon>Ryujinx_Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.11.46.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="MaterialSkin">
-      <HintPath>..\..\..\..\Downloads\MaterialSkin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="ReaLTaiizor">
-      <HintPath>..\..\..\..\Downloads\ReaLTaiizor\net48\ReaLTaiizor.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -96,29 +82,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\About.Designer.vb">
-      <DependentUpon>About.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\About.vb">
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Form\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FR.Designer.vb">
-      <DependentUpon>FR.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\FR.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FWD.Designer.vb">
-      <DependentUpon>FWD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\FWD.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Main.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Main.Designer.vb">
-      <DependentUpon>Main.vb</DependentUpon>
+    <Compile Include="Form\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,19 +106,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Script\FileDeleter.vb" />
+    <Compile Include="Script\InternetChecker.vb" />
+    <Compile Include="Script\RoundButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\RyujinxCustomTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\RyujinxProgressBar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\RyujinxReleaseDownloader.vb" />
+    <Compile Include="Script\RyujinxZipExtractor.vb" />
+    <Compile Include="Script\SoftwareInstaller.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form\About.resx">
-      <DependentUpon>About.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FR.resx">
-      <DependentUpon>FR.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FWD.resx">
-      <DependentUpon>FWD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Main.resx">
-      <DependentUpon>Main.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -159,7 +133,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Ryujinx-Installer.exe.config" />
+    <None Include="app.manifest" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -171,20 +145,23 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\MaterialSkin.dll" />
-    <None Include="bin\Debug\ReaLTaiizor.dll" />
-    <None Include="bin\Debug\bin\dlls\ReaLTaiizor.dll" />
-    <None Include="bin\Debug\bin\dlls\MaterialSkin.dll" />
-    <None Include="bin\Debug\HtmlAgilityPack.dll" />
+    <None Include="Resources\Ryujinx-Uninstaller.exe" />
     <None Include="Resources\Ryujinx-Updater.exe" />
-    <Content Include="Ryujinx-Logo.ico" />
+    <None Include="Res\Ryujinx_Logo.ico" />
+    <Content Include="Ryujinx_Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
 </Project>

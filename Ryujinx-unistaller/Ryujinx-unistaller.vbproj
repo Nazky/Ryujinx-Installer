@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDBA5B2F-37B8-434D-98DE-89F0771AA5E2}</ProjectGuid>
+    <ProjectGuid>{C39AFF39-C307-4997-B69F-57CC98AF4FB5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Ryujinx_Updater.My.MyApplication</StartupObject>
-    <RootNamespace>Ryujinx_Updater</RootNamespace>
-    <AssemblyName>Ryujinx-Updater</AssemblyName>
+    <StartupObject>Ryujinx_Unistaller.My.MyApplication</StartupObject>
+    <RootNamespace>Ryujinx_Unistaller</RootNamespace>
+    <AssemblyName>Ryujinx-Uninstaller</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Ryujinx-Updater.xml</DocumentationFile>
+    <DocumentationFile>Ryujinx-Uninstaller.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Ryujinx-Updater.xml</DocumentationFile>
+    <DocumentationFile>Ryujinx-Uninstaller.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -59,7 +59,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -92,6 +91,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,17 +103,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Script\FileDeleter.vb" />
-    <Compile Include="Script\InternetChecker.vb" />
     <Compile Include="Script\RoundButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Script\RyujinxProgressBar.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Script\RyujinxReleaseChecker.vb" />
-    <Compile Include="Script\RyujinxReleaseDownloader.vb" />
-    <Compile Include="Script\RyujinxZipExtractor.vb" />
+    <Compile Include="Script\SoftwareInstaller.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Form1.resx">
@@ -128,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -141,6 +135,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ryujinx_Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

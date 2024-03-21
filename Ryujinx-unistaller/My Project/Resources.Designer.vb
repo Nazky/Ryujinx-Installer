@@ -39,7 +39,7 @@ Namespace My.Resources
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Ryujinx_Installer.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Ryujinx_Unistaller.Resources", GetType(Resources).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -58,36 +58,6 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        '''</summary>
-        Friend ReadOnly Property Ryujinx_Logo() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Ryujinx_Logo", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property Ryujinx_Uninstaller() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Ryujinx_Uninstaller", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Recherche une ressource localisée de type System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property Ryujinx_Updater() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Ryujinx_Updater", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
         End Property
     End Module
 End Namespace

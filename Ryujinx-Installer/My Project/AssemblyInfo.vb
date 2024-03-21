@@ -9,16 +9,16 @@ Imports System.Runtime.InteropServices
 ' Vérifiez les valeurs des attributs de l'assembly
 
 <Assembly: AssemblyTitle("Ryujinx-Installer")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("A simple installer for the Ryujinx emulator.")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Ryujinx-Installer")>
-<Assembly: AssemblyCopyright("Copyright © NazkyYT 2022")>
+<Assembly: AssemblyCopyright("Copyright © NazkyYT 2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-<Assembly: Guid("ec2e613a-7350-4d5f-8bb0-65e65e57cd9d")>
+<Assembly: Guid("01d758ec-12af-419e-ae74-eac20e26f2d7")>
 
 ' Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' en utilisant '*', comme indiqué ci-dessous :
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("0.0.0.1")>
+<Assembly: AssemblyFileVersion("0.0.0.1")>
